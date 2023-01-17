@@ -17,7 +17,7 @@ def print_mess(name,question, answer):
   print(str(name) + " asked " + str(question))
   print("Magic 8-ball's answer: " + str(answer))
       
-#promts the user what question they would like to ask
+#prompts the user what question they would like to ask
 #checks for blanks, and reprompts if so
 def quest():
   question = input("Whats your yes or no Question? \n")
