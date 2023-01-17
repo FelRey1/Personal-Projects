@@ -28,7 +28,7 @@ def quest():
         quest()
   return question
 
-#@return the asnwer based on a random number
+#@return the asnwer based on a random number or an error if number is above 12
 def ans(rand_num):     
   if(rand_num == 1):
     answer = "Yes- definitely"
