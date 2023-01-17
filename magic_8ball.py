@@ -1,6 +1,7 @@
-# a program that will take in a question from the user
-# will give a response and will
+# a program that will take in a yes or no question from the user
+# will give a response
 # can take in questions on after another
+#can give different responses to same questions
 # @author Felix Reyes, 11/24/22
 import random
 
@@ -10,9 +11,14 @@ name = " "
 name = input("Whats your name? \n")
 if(name == "" or name == " "):
       name = "I"
+      
+#prints a message for the user 
 def print_mess(name,question, answer):
   print(str(name) + " asked " + str(question))
   print("Magic 8-ball's answer: " + str(answer))
+      
+#promts the user what question they would like to ask
+#checks for blanks, and reprompts if so
 def quest():
   question = input("Whats your yes or no Question? \n")
   if(question == "" or question == " "):
@@ -22,6 +28,7 @@ def quest():
         quest()
   return question
 
+#@return the asnwer based on a random number
 def ans(rand_num):     
   if(rand_num == 1):
     answer = "Yes- definitely"
@@ -66,6 +73,8 @@ def ans(rand_num):
 question = quest()
 answer = ans(rand_num)
 
+#@returns another answer if previous 
+#answer is "ask again"
 def ask_ag(answer,question):
   if answer == "ask again":
     print_mess(name,question,answer)
@@ -83,6 +92,7 @@ if answer == "ask again":
  answer = ask_ag(answer,question)
 print_mess(name,question,answer)
 
+#continues program if the user wants to ask another question
 def cont():
   con = input("want to ask another question? y or n \n")
   if con == 'y':
